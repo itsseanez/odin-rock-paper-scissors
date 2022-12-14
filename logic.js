@@ -40,11 +40,23 @@ function playRound(playerSelection, computerSelection) {
     }
     return roundWinner;
 }
-function game() {
+const computerSelection = getComputerChoice();
+const rock= document.querySelector('.rock');
+const paper= document.querySelector('.paper');
+const scissors= document.querySelector('.scissors');
+rock.addEventListener('click', () => {
+    playRound('rock', computerSelection)
+});
+paper.addEventListener('click', () => {
+    playRound('paper', computerSelection)
+});
+scissors.addEventListener('click', () => {
+    playRound('scissors', computerSelection)
+});
+/* function game() {
     for(let i=0 ; i<5 ; i++) {
         const playerSelection= prompt("Rock, Paper, or Scissors?")
         console.log(playRound(playerSelection, computerSelection));
     }
-}
-const computerSelection = getComputerChoice();
-console.log(game());
+} */
+// console.log(game()); 
