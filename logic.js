@@ -15,7 +15,11 @@ function getComputerChoice() {
     return computerSelection;
 }
 
-function playRound(playerSelection, computerSelection) {
+function getScore() {
+    
+}
+
+function playRound(playerSelection, playerScore, computerSelection, computerScore) {
     playerSelection.toLowerCase();
     let roundWinner;
     if (playerSelection == "rock" && getComputerChoice() == "paper") {
